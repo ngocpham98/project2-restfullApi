@@ -1,0 +1,864 @@
+{
+	"info": {
+		"_postman_id": "e0b0f789-38d6-4a42-9a75-3347f1f1e613",
+		"name": "ONLINE GAME",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20069684"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ngocpham\",\r\n    \"password\": \"ngocpham123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"ngocpham\",\r\n    \"password\": \"ngocpham123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/login",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI2MjE3MiwiZXhwIjoxNjgyODY2OTcyfQ.0QpYqL-kG_IXfTfN8DgctMbLXUHe_dSWhlXZuwasiuo\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/logout",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_info_after_signup",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI2MjE3MiwiZXhwIjoxNjgyODY2OTcyfQ.0QpYqL-kG_IXfTfN8DgctMbLXUHe_dSWhlXZuwasiuo\",\r\n    \"username\": \"ngocpham\",\r\n    \"avatar\": \"123\",\r\n    \"email\": \"ngoc@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/change_info_after_signup",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change_info_after_signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_info",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/get_user_info",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"get_user_info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change_password",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"old_password\": \"new_password1\",\r\n    \"new_password\": \"ngocpham123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/change_password",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"change_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set_block",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"user_id\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/set_block",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"set_block"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_list_block",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/auth/get_list_block",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"get_list_block"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rooms",
+			"item": [
+				{
+					"name": "get_list_rooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI2MjE3MiwiZXhwIjoxNjgyODY2OTcyfQ.0QpYqL-kG_IXfTfN8DgctMbLXUHe_dSWhlXZuwasiuo\",\r\n    \"index\": \"0\",\r\n    \"count\": \"10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/rooms/get_list_rooms",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get_list_rooms"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI2NDMyOCwiZXhwIjoxNjgyODY5MTI4fQ.LSX_8ES6V5uZ4w_tstM3970UutPVXpFZHwuPVFqrhbA\",\r\n    \"room_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/rooms/get_room",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"get_room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjM4OTIxMiwiZXhwIjoxNjgyOTk0MDEyfQ.5mIy9wIfxJZ8bV06kRMS_v172iAZFB8kGxoHtcu0bCw\",\r\n    \"room_name\": \"Room 6\",\r\n    \"max\": 10\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/rooms/add_room",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"add_room"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "edit_room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI2NDMyOCwiZXhwIjoxNjgyODY5MTI4fQ.LSX_8ES6V5uZ4w_tstM3970UutPVXpFZHwuPVFqrhbA\",\r\n    \"room_id\": 10,\r\n    \"room_name\": \"new\",\r\n    \"max\": 100\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/rooms/edit_room",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"rooms",
+								"edit_room"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "comments",
+			"item": [
+				{
+					"name": "get_comments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"room_id\": 1,\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/comments/get_comments",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"get_comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set_comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"room_id\": 1,\r\n    \"user_id\": 1,\r\n    \"content\": \"game hay\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/comments/set_comment",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"comments",
+								"set_comment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "reports",
+			"item": [
+				{
+					"name": "report",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"room_id\": 1,\r\n    \"user_id\": 1,\r\n    \"content\": \"spam phong 1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/reports/report",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"report"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "search",
+			"item": [
+				{
+					"name": "search",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3MjAzMiwiZXhwIjoxNjgyODc2ODMyfQ.Gq7WkT9FoZnUKDvOl-NEeRA73qRTKY5eYzGM6mJZjD4\",\r\n    \"keyword\": \"ng\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/search",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"search"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "push",
+			"item": [
+				{
+					"name": "get_push_settings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjMwNjk5NSwiZXhwIjoxNjgyOTExNzk1fQ.k6WkzgFU-DrYcg0VrWn8hB9X-SgCZMxU8W7rnuImWks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/push/get_push_settings",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"push",
+								"get_push_settings"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set_push_settings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMSIsImlhdCI6MTY4MjI3NzU4MCwiZXhwIjoxNjgyODgyMzgwfQ.RugDo0u7k_HZbe26NRj53w0F27Fl3NlH0BA4SV4EE38\",\r\n    \"new_roommate\": \"pro12345\",\r\n    \"new_room\": \"Room xxx\",\r\n    \"news\": \"news\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/push/set_push_settings",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"push",
+								"set_push_settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "conversations",
+			"item": [
+				{
+					"name": "get_list_conversation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxNzI4NSwiZXhwIjoxNjgyOTIyMDg1fQ.Wd3guTEnkkf2LKPIG8-Q1VJkaTn-ulVwW_WfFHESf68\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/conversations/get_list_conversation",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								"get_list_conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_conversation_detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxNzI4NSwiZXhwIjoxNjgyOTIyMDg1fQ.Wd3guTEnkkf2LKPIG8-Q1VJkaTn-ulVwW_WfFHESf68\",\r\n    \"partner_id\": 1, \r\n    \"conversation_id\": 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/conversations/get_conversation_detail",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								"get_conversation_detail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_conversation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxNzI4NSwiZXhwIjoxNjgyOTIyMDg1fQ.Wd3guTEnkkf2LKPIG8-Q1VJkaTn-ulVwW_WfFHESf68\",\r\n    \"partner_id\": 1, \r\n    \"conversation_id\": 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/conversations/delete_conversation",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								"delete_conversation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_message",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxOTE5NiwiZXhwIjoxNjgyOTIzOTk2fQ.4dJ8artj9V9Sr8T7qkI6FkNOaDXsFLRs2GZbY97CYu4\",\r\n    \"partner_id\": 1, \r\n    \"message_id\": 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/conversations/delete_message",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								"delete_message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set_read_message",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxOTE5NiwiZXhwIjoxNjgyOTIzOTk2fQ.4dJ8artj9V9Sr8T7qkI6FkNOaDXsFLRs2GZbY97CYu4\",\r\n    \"message_id\": 1 \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/conversations/set_read_message",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"conversations",
+								"set_read_message"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "notifications",
+			"item": [
+				{
+					"name": "get_notification",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxOTE5NiwiZXhwIjoxNjgyOTIzOTk2fQ.4dJ8artj9V9Sr8T7qkI6FkNOaDXsFLRs2GZbY97CYu4\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/notifications/get_notification",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"get_notification"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "set_read_notification",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMxOTE5NiwiZXhwIjoxNjgyOTIzOTk2fQ.4dJ8artj9V9Sr8T7qkI6FkNOaDXsFLRs2GZbY97CYu4\",\r\n    \"notification_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/notifications/set_read_notification",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"notifications",
+								"set_read_notification"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "scores",
+			"item": [
+				{
+					"name": "get_score",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMzODQxNywiZXhwIjoxNjgyOTQzMjE3fQ.ji9IunxJ9oYiBbVv-bFyp26lQGIIbMwj80RNNRPf9sA\",\r\n    \"user_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/scores/get_score",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scores",
+								"get_score"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_score_detail",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJuZ29jcGhhbSIsImlzX2FkbWluIjoiMCIsImlhdCI6MTY4MjMzODQxNywiZXhwIjoxNjgyOTQzMjE3fQ.ji9IunxJ9oYiBbVv-bFyp26lQGIIbMwj80RNNRPf9sA\",\r\n    \"room_id\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/api/v1/scores/get_score_detail",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"scores",
+								"get_score_detail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "https://online-game-np.onrender.com",
+			"type": "string"
+		}
+	]
+}
