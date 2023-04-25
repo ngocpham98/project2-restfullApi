@@ -1,0 +1,17 @@
+{
+  "development": {
+    "username": "root",
+    "password": null,
+    "database": "online_game_np",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "onlinegamenp_boardball",
+    "password": "b70b9f2709fa30f77ce025bfa4e4f378d1752c2f",
+    "database": "onlinegamenp_boardball",
+    "host": "ash.h.filess.io",
+    "port": 3307,
+    "dialect": "mysql"
+  }
+}
